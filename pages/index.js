@@ -8,8 +8,10 @@ export default function Home() {
 
   return (
     <div>
+      
+      <Header />
       <BreweryHome />
-    <Header />
+      
     </div>
   )
 }
