@@ -10,7 +10,7 @@ const colors = {
 
 export default function Card(props) {
     return (
-        <Link href={`/${props.name}`} onClick={() => console.log(props.name)}>
+        <Link href={`/${props.id}`} onClick={() => console.log(props.id)}>
             <Container>
                 <Top>
                     <h1> { props.name } </h1>

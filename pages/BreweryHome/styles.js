@@ -55,11 +55,11 @@ export const Loading = styled.div`
 &:after {
   content: " ";
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid gray;
+  border: 10px solid gray;
   border-color: gray transparent gray transparent;
   animation: ${rotacao} 1.2s linear infinite;
 }
@@ -67,7 +67,7 @@ export const Loading = styled.div`
 
 export const ContainerLoading = styled.div`
     width: 100%;
-    flex: 1;
+    flex: 5;
     display: flex;
     justify-content: center;
     align-items: center;

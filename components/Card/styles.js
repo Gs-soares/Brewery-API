@@ -9,7 +9,7 @@ export const Container = styled.div`
     flex-direction: column;
     h1{
         margin: 0;
-        font-weight: 600;
+        font-weight: 200;
         font-size: 29px;
         font-family: 'david-libre';
         padding: 1rem;
@@ -20,7 +20,7 @@ export const CardContent = styled.div`
     padding: 0rem 1rem;
     font-size: 14px;
     font-family: 'david-libre';
-    font-weight: 600;
+    font-weight: 100;
 `
 
 export const Line = styled.div`
@@ -45,6 +45,6 @@ export const TypeCard = styled.div`
         padding: 0.3rem;
         border-radius: 4px;
         font-size: 13px;
-        font-weight: 500;
+        font-weight: 100;
     }
 `
