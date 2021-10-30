@@ -10,7 +10,7 @@ export const Container = styled.div`
     h1{
         margin: 0;
         font-weight: 200;
-        font-size: 29px;
+        font-size: 25px;
         font-family: 'david-libre';
         padding: 1rem;
     }
@@ -30,7 +30,7 @@ export const Line = styled.div`
 `
 
 export const Top = styled.div`
-    height: 30vh;
+    height: 31vh;
 `
 
 export const Bottom = styled.div`
@@ -42,9 +42,9 @@ export const TypeCard = styled.div`
     div{
         background-color: blueviolet;
         width: fit-content;
-        padding: 0.3rem;
+        padding: 0.3rem 0.6rem;
         border-radius: 4px;
         font-size: 13px;
-        font-weight: 100;
+        font-weight: 600;
     }
 `

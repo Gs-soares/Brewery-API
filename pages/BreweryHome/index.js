@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
-import { Container, Content, DropDown, Loading, ContainerLoading } from './styles'
+import { Container, Content, DropDown, Loading, ContainerLoading, PageButtons } from './styles'
 import Card from '../../components/Card'
 import api from '../../services/api'
 
@@ -18,15 +17,17 @@ export default function BreweryHome(){
     const [breweries, setBreweries] = useState([]);
     const [selectedType, setSelectedType] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-
+    const [pages, setSelectedPage] = useState(1);
+//per_page=20&by_type=${selectedType}
+//?page=2
     useEffect(() => {
         setIsLoading(true);
 
-        api.get(`breweries?by_type=${selectedType}`).then(response => {
+        api.get(`breweries?per_page=20&by_type=${selectedType}&page=${pages}`).then(response => {
             setBreweries(response.data);
             setIsLoading(false);
         })
-    }, [selectedType]);
+    }, [selectedType, pages]);
 
     return(
         <Container>
@@ -35,7 +36,6 @@ export default function BreweryHome(){
                 <DropDown placeholder='selecione um tipo' onChange={(tipo) => setSelectedType(tipo.target.value)}>
                     {typesValues.map(type => (
                         <>
-                        <option value="" disabled selected hidden>Please Choose...</option>
                         <option value={type}>{type}</option>
                         </>
                     ))}
@@ -61,6 +61,12 @@ export default function BreweryHome(){
                     ))}
                 </Content>
             )}
+
+            <PageButtons>
+                <button onClick={() => setSelectedPage(1)}>1</button>
+                <button onClick={() => setSelectedPage(2)}>2</button>
+                <button onClick={() => setSelectedPage(3)}>3</button>
+            </PageButtons>
         </Container>
     )
 }

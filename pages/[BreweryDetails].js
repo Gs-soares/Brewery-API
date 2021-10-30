@@ -4,25 +4,21 @@ import { useRouter } from 'next/router'
 import api from '../services/api';
 import CardDetails from '../components/CardDetails';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function BreweryDetails() {
     const router = useRouter();
-    console.log(router);
-
     const [brewerie, setBrewerie] = useState({})
 
     useEffect(() => {
         api.get(`breweries/${router.query.BreweryDetails}`).then(response => {
             setBrewerie(response.data);
-
-            // console.log(breweries)
         })
-    })
+    }, [])
 
     return (
         <>
             <Header />
-
             <CardDetails
                 id={brewerie.id}
                 name={brewerie.name}
@@ -37,6 +33,7 @@ export default function BreweryDetails() {
                 maps_lat={brewerie.latitude}
                 maps_long={brewerie.longitude}
             />
+            <Footer />
         </>
     )
 }

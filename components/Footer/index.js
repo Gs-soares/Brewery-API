@@ -1,7 +1,13 @@
+import { Container, Content, TextFooter } from "./styles";
+
 export default function Footer(){
     return(
-        <div>
-            Hello
-        </div>
+        <Container>
+            <Content>
+                <TextFooter>
+                    <span>Breweries List</span>
+                </TextFooter>
+            </Content>
+        </Container>
     )
 }

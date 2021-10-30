@@ -16,14 +16,19 @@ export default function Card(props) {
                     <h1> { props.name } </h1>
                     <CardContent>
                         { props.street }
-                        <div> { props.city } { props.state } - { props.number }</div>
+                        <div> 
+                            { props.city } 
+                            { props.state } - { props.number }
+                        </div>
                     </CardContent>
                 </Top>
 
                 <Bottom>
                     <Line />
                     <TypeCard>
-                        <div style={{ backgroundColor: colors[props.brewery_type], color: props.brewery_type === "brewpub" ? "black" : "white" }}> { props.brewery_type } </div>
+                        <div style={{ backgroundColor: colors[props.brewery_type], color: props.brewery_type === "brewpub" ? "black" : "white" }}> 
+                            { props.brewery_type } 
+                        </div>
                     </TypeCard>
                 </Bottom>
             </Container>

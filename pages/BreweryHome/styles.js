@@ -72,3 +72,12 @@ export const ContainerLoading = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const PageButtons = styled.div`
+  background-color: red;
+  width: 100%;
+
+  button{
+    
+  }
+`
