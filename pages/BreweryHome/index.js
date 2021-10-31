@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Container, Content, DropDown, Loading, ContainerLoading, PageButtons } from './styles'
+import { Container, Content, DropDown, Loading, ContainerLoading, PageButtons, Buttons } from './styles'
 import Card from '../../components/Card'
 import api from '../../services/api'
 
@@ -63,9 +63,11 @@ export default function BreweryHome(){
             )}
 
             <PageButtons>
-                <button onClick={() => setSelectedPage(1)}>1</button>
-                <button onClick={() => setSelectedPage(2)}>2</button>
-                <button onClick={() => setSelectedPage(3)}>3</button>
+                <Buttons>
+                    <button onClick={() => setSelectedPage(1)}>1</button>
+                    <button onClick={() => setSelectedPage(2)}>2</button>
+                    <button onClick={() => setSelectedPage(3)}>3</button>
+                </Buttons>
             </PageButtons>
         </Container>
     )

@@ -74,10 +74,15 @@ export const ContainerLoading = styled.div`
 `
 
 export const PageButtons = styled.div`
-  background-color: red;
-  width: 100%;
+  margin: 0 auto;
+  width: 50%;
+`
 
-  button{
-    
-  }
+export const Buttons = styled.div`
+  margin: 0 auto;
+  width: 50%;
+
+    button{
+      margin: 0 auto;
+    }
 `
