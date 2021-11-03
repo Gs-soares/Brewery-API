@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-import { Container, Content, Detail, Voltar } from "./styles";
+import { Container, Content, Detail, Voltar } from './styles';
 
 export default function Details(props) {
   return (
@@ -23,9 +23,14 @@ export default function Details(props) {
           <p>State: {props.state}</p>
           <p>Postal code: {props.postal_code}</p>
           <p>Country: {props.country}</p>
-          <p>Website: <span> {props.website}</span></p>
+          <p>
+            Website: <span> {props.website}</span>
+          </p>
           <p>Phone: {props.phone}</p>
-          <p>Open in maps: <span> {props.maps_lat} </span>,<span>{props.maps_long}</span></p>
+          <p>
+            Open in maps: <span> {props.maps_lat} </span>,
+            <span>{props.maps_long}</span>
+          </p>
         </Detail>
       </Content>
     </Container>

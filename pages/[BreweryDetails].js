@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-import api from "../services/api";
-import CardDetails from "../components/CardDetails";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import api from '../services/api';
+import CardDetails from '../components/CardDetails';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function BreweryDetails() {
   const router = useRouter();

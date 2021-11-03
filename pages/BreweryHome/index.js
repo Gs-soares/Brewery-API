@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import {
   Container,
   Content,
@@ -7,27 +7,27 @@ import {
   ContainerLoading,
   PageButtons,
   StyleButton,
-} from "./styles";
-import Card from "../../components/Card";
-import api from "../../services/api";
+} from './styles';
+import Card from '../../components/Card';
+import api from '../../services/api';
 
 const typesValues = [
-  "",
-  "micro",
-  "nano",
-  "regional",
-  "brewpub",
-  "large",
-  "planning",
-  "bar",
-  "contract",
-  "closed",
+  '',
+  'micro',
+  'nano',
+  'regional',
+  'brewpub',
+  'large',
+  'planning',
+  'bar',
+  'contract',
+  'closed',
 ];
-const descValues = ["todos"];
+const descValues = ['todos'];
 
 export default function BreweryHome() {
   const [breweries, setBreweries] = useState([]);
-  const [selectedType, setSelectedType] = useState("");
+  const [selectedType, setSelectedType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [pages, setSelectedPage] = useState(1);
 
@@ -42,7 +42,7 @@ export default function BreweryHome() {
       queryString.push(`page=${pages}`);
     }
 
-    api.get(`breweries?${queryString.join("&")}`).then((response) => {
+    api.get(`breweries?${queryString.join('&')}`).then((response) => {
       setBreweries(response.data);
       setIsLoading(false);
     });

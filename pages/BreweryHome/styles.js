@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   width: 95%;
@@ -53,7 +53,7 @@ export const Loading = styled.div`
   height: 80px;
 
   &:after {
-    content: " ";
+    content: ' ';
     display: block;
     width: 100px;
     height: 100px;

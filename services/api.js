@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://api.openbrewerydb.org/",
+  baseURL: 'https://api.openbrewerydb.org/',
 });
 
 export default api;

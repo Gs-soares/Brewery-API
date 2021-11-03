@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.25);
@@ -10,7 +10,7 @@ export const Container = styled.div`
     margin: 0;
     font-weight: 200;
     font-size: 25px;
-    font-family: "david-libre";
+    font-family: 'david-libre';
     padding: 1rem;
   }
 `;
@@ -18,7 +18,7 @@ export const Container = styled.div`
 export const CardContent = styled.div`
   padding: 0rem 1rem;
   font-size: 14px;
-  font-family: "david-libre";
+  font-family: 'david-libre';
   font-weight: 100;
 `;
 

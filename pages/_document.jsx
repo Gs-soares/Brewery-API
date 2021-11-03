@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Document, {
   DocumentInitialProps,
   DocumentContext,
@@ -6,8 +6,8 @@ import Document, {
   Head,
   Main,
   NextScript,
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class CheckoutDocument extends Document {
   static async getInitialProps(ctx) {

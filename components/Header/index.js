@@ -1,4 +1,4 @@
-import { Container, Content, TitleNavbar } from "./styles";
+import { Container, Content, TitleNavbar } from './styles';
 
 export default function Header() {
   return (
