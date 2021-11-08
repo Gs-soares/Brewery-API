@@ -8,6 +8,7 @@ import {
   PageButtons,
   StyleButton,
 } from './styles';
+
 import Card from '../../components/Card';
 import api from '../../services/api';
 
@@ -23,7 +24,6 @@ const typesValues = [
   'contract',
   'closed',
 ];
-const descValues = ['todos'];
 
 export default function BreweryHome() {
   const [breweries, setBreweries] = useState([]);
