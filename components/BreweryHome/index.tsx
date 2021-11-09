@@ -9,20 +9,55 @@ import {
   StyleButton,
 } from './styles';
 
-import Card from '../../components/Card';
+import Card from '../Card';
 import api from '../../services/api';
 
-const typesValues = [
-  '',
-  'micro',
-  'nano',
-  'regional',
-  'brewpub',
-  'large',
-  'planning',
-  'bar',
-  'contract',
-  'closed',
+interface IStypeFilter {
+  filterValue: string;
+  desc: string;
+}
+
+const FilterValue: IStypeFilter[] = [
+  {
+    filterValue: '',
+    desc: 'Todos'
+  },
+  {
+    filterValue: 'micro',
+    desc: 'Micro'
+  },
+  {
+    filterValue: 'nano',
+    desc: 'Nano'
+  },
+  {
+    filterValue: 'regional',
+    desc: 'Regional'
+  },
+  {
+    filterValue: 'brewpub',
+    desc: 'Brewpub'
+  },
+  {
+    filterValue: 'large',
+    desc: 'Large'
+  },
+  {
+    filterValue: 'planning',
+    desc: 'Planning'
+  },
+  {
+    filterValue: 'bar',
+    desc: 'Bar'
+  },
+  {
+    filterValue: 'contract',
+    desc: 'Contract'
+  },
+  {
+    filterValue: 'closed',
+    desc: 'Closed'
+  },
 ];
 
 export default function BreweryHome() {
@@ -52,10 +87,10 @@ export default function BreweryHome() {
     <Container>
       <p>
         Filtro:
-        <DropDown onChange={(tipo) => setSelectedType(tipo.target.value)}>
-          {typesValues.map((type) => (
-            <option value={type}>{type}</option>
-          ))}
+        <DropDown onChange={(tipo) => setSelectedType(tipo.target.value)}>  
+          {FilterValue.map((tipo) => (
+              <option value={tipo.filterValue}>{tipo.desc}</option>
+            ))}
         </DropDown>
       </p>
 

@@ -38,6 +38,7 @@ export const TypeCard = styled.div`
   padding: 0.5rem 1rem;
 
   div {
+    border: 1px solid black;
     background-color: blueviolet;
     width: fit-content;
     padding: 0.3rem 0.6rem;

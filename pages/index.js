@@ -1,4 +1,4 @@
-import BreweryHome from './BreweryHome';
+import BreweryHome from '../components/BreweryHome/index.tsx';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
